@@ -10,19 +10,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const App = () => {
-  const [items, setItems] = useState([ ]);
+  	const [items, setItems] = useState([ ]);
+		const [inputBudgetValue, setBudgetValue] = useState('');
 		const [inputValue, setInputValue] = useState('');
 		const [priceInputValue, setPriceInputValue] = useState('');
 		const [totalItemCount, setTotalItemCount] = useState(0);
 		const [totalPriceCount, setTotalPriceCount] = useState(0);
 		const [totalItemPrice, setItemTotalPrice] = useState(0);
-
-
+		const [priceColor, setPriceColorClass] = useState("regular-price")
+		const [budgetMessage, setBudgetMessage] = useState("preparing to keep you in budget...")
+		
+	// add new item
 		const handleAddButtonClick = () => {
-
-			console.log (priceInputValue)
 			const newPrice = parseInt(priceInputValue)
-			console.log (newPrice)
 			const newItem = {
 				itemName: inputValue,
 				quantity: 0,
@@ -31,76 +31,101 @@ const App = () => {
 				isSelected: false
 			};
 			const newItems = [...items, newItem];
-			console.log (newItems)
-
 			setItems(newItems);
 			setInputValue('');
 			setPriceInputValue('')
-			setItemTotalPrice()
+			setItemTotalPrice();
 			calculateTotal();
-			calculateItemTotalPrice();
 			calculateTotalPrice();
 		};
 
-	// 
+	// increase quantity
 		const handleQuantityIncrease = (index) => {
 			const newItems = [...items];
-			newItems[index].quantity++;
+			const indexItem = newItems[index];
+			indexItem.quantity++;
+			indexItem.total_price = indexItem.quantity * indexItem.price;
 			setItems(newItems);
+			setItemTotalPrice();
 			calculateTotal();
-			calculateItemTotalPrice();
 			calculateTotalPrice();
+			
 		};
-	// 
+
+	// decreate quantity 
 		const handleQuantityDecrease = (index) => {
 			const newItems = [...items];
-			newItems[index].quantity--;
+			const indexItem = newItems[index];
+			indexItem.quantity--;
+			indexItem.total_price = indexItem.quantity * indexItem.price;
 			setItems(newItems);
+			setItemTotalPrice();
 			calculateTotal();
-			calculateItemTotalPrice();
 			calculateTotalPrice();
+			
 		};
-// 
+
+// toggle complete feature
 		const toggleComplete = (index) => {
 			const newItems = [...items];
 			newItems[index].isSelected = !newItems[index].isSelected;
 			setItems(newItems);
 		};
-	// this works don't mess with it
-		const calculateTotal = () => {
-			const totalItemCount = items.reduce((item, total) => {
-				return total + item.quantity;
-			}, 0);
-			setTotalItemCount(totalItemCount);
-		};
-	// math is working, but not updating on the item level - try something with the quantity handler
-	const calculateItemTotalPrice = () => {
-		const totalItemPrice = items.reduce((item, total) => {
-			console.log (item)
-			return total.quantity * total.price;
-		}, 0);
-		setItemTotalPrice(totalItemPrice)	
-		};
 
+	// this works don't mess with it
+	const calculateTotal = () => {
+		const totalItemCount = items.reduce((total, item) => {
+			return total + item.quantity;
+		}, 0);
+		setTotalItemCount(totalItemCount);
+	};
+
+		// this works don't mess with it
 		const calculateTotalPrice = () => {
-			const totalPriceCount = items.reduce((item, total) => {
-				console.log (total)
-				return total * total;
-			}, 0);
+			const itemArr = items;
+
+			let totalPriceCount = 0; 
+
+			itemArr.forEach(total => { 
+				totalPriceCount += total.total_price;
+			});
 			setTotalPriceCount(totalPriceCount);
+
+			let priceColor = {
+				color: "green"
+			}
+			if (totalPriceCount > inputBudgetValue) {
+				priceColor = "over-budget";
+			} else {
+				priceColor = "under-budget";
 			};
-		
+			setPriceColorClass(priceColor)
+			let budgetMessage 
+			if (totalPriceCount > inputBudgetValue) {
+				budgetMessage = "OH GOSH! You're over budget!";
+			} else {
+				budgetMessage = "Excellent job staying within your budget!";
+			};
+
+			setBudgetMessage(budgetMessage)
+	};
+
+
+	
 
   return (
     <div className="app-background">
+			<h1 className="app-title">Shopping Budgeting App</h1>
+			<div className="add-budget-box">
+				<h1 className="instructions">Start by adding your budget for today</h1>
+				<input value={inputBudgetValue} onChange={(e) => setBudgetValue(e.target.value)} className="add-budget-input" placeholder="What's your budget?" />
+			</div>
       <div className="main-container">
-							{/* input box */}
         <div className="add-item-box">
-								<input value={inputValue} onChange={(e) => setInputValue(e.target.value)} className='add-item-input' placeholder='Add an item |' />
-								<input value={priceInputValue} onChange={(e) => setPriceInputValue(e.target.value)} className='add-item-input' placeholder='$' />
-								<FontAwesomeIcon icon={faPlus} onClick={() => handleAddButtonClick()} />
-								</div>
-								{/* list */}
+						<input value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="add-item-input" placeholder='Type Item' />
+						<input value={priceInputValue} onChange={(e) => setPriceInputValue(e.target.value)} className="add-price-input" placeholder='Type Cost' />
+						<FontAwesomeIcon icon={faPlus} onClick={() => handleAddButtonClick()} />
+				</div>
         <div className="item-list">
           {items.map((item, index) => (
             <div className="item-container">
@@ -117,21 +142,26 @@ const App = () => {
                   </>
                 )}
               </div>
+							<div>$ {item.price*item.quantity}</div>
               <div className="quantity">
                 <button>
-																<FontAwesomeIcon icon={faChevronLeft} onClick={() => handleQuantityDecrease(index)} />
+										<FontAwesomeIcon icon={faChevronLeft} onClick={() => handleQuantityDecrease(index)} />
                 </button>
                 <span> {item.quantity} </span>
                 <button>
-																<FontAwesomeIcon icon={faChevronRight} onClick={() => handleQuantityIncrease(index)} />
+										<FontAwesomeIcon icon={faChevronRight} onClick={() => handleQuantityIncrease(index)} />
                 </button>
               </div>
             </div>
           ))}
         </div>
-								<div className='total'>$: {totalPriceCount}</div>
-								<div className='total'>Items: {totalItemCount}</div>
-      </div>
+				<div className="totals">
+					<div className='total'>Items: {totalItemCount}</div>
+					<div className='total'>Total $: <span className={priceColor}>{totalPriceCount}</span></div>
+					<div className='total'>Budget: {inputBudgetValue}</div>
+				</div>
+			</div>
+			<h1 className="budget-message">{budgetMessage}</h1>
     </div>
   );
 };
