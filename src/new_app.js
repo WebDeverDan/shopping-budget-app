@@ -8,7 +8,6 @@ import {
   faCheckCircle,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
-import {Container , Card, Form, Button} from 'react-bootstrap'  
 
 
 const App = () => {
@@ -65,7 +64,6 @@ const App = () => {
     setItemTotalPrice();
     calculateTotal();
     calculateTotalPrice();
-		console.log(newItems)
   };
 
   // toggle complete feature
@@ -114,62 +112,37 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <Container fluid className="app-background">
-        <h1 className="app-title">Shopping Budgeting App</h1>
-        <div className="add-budget-box">
-          <h1 className="instructions">
-            Start by adding your budget for today
-          </h1>
-          <Form>
-            <Form.Group
-              className="mb-1 add-budget-box"
-              controlId="formEnterBudget"
-            >
-              <Form.Control
-                className="add-budget-input"
-                type="input"
-                placeholder="Type Budget"
-                value={inputBudgetValue}
-                onChange={(e) => setBudgetValue(e.target.value)}
-              />
-            </Form.Group>
-          </Form>
-        </div>
-				<h1 className="budget-message">{budgetMessage}</h1>
-        <Card className="main-container">
-          <Form className="add-item-form">
-            <Form.Group className="mb-1" controlId="formEnterItem">
-              <Form.Label>New Item</Form.Label>
-              <Form.Control
-                type="input"
-                placeholder="Type Item"
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-              />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formEnterCost">
-              <Form.Label>Item Cost</Form.Label>
-              <Form.Control
-                type="input"
-                placeholder="Cost"
-                value={priceInputValue}
-                onChange={(e) => setPriceInputValue(e.target.value)}
-              />
-            </Form.Group>
-            <Button
+    <div className="app-background">
+      <h1 className="app-title">Shopping Budgeting App</h1>
+      <div className="add-budget-box">
+        <h1 className="instructions">Start by adding your budget for today</h1>
+        <input
+          value={inputBudgetValue}
+          onChange={(e) => setBudgetValue(e.target.value)}
+          className="add-budget-input"
+          placeholder="What's your budget?"
+        />
+      </div>
+      <div className="main-container">
+        <div className="add-item-box">
+          <input
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
+            className="add-item-input"
+            placeholder="Type Item"
+          />
+          <input
+            value={priceInputValue}
+            onChange={(e) => setPriceInputValue(e.target.value)}
+            className="add-price-input"
+            placeholder="Type Cost"
+          />
+          <FontAwesomeIcon
             icon={faPlus}
             onClick={() => handleAddButtonClick()}
-          >Add Item</Button>
-          </Form>
-					<div className="totals">
-          <div className="total">Items: {totalItemCount}</div>
-          <div className="total">
-            Total $: <span className={priceColor}>{totalPriceCount}</span>
-          </div>
-          <div className="total">Budget: {inputBudgetValue}</div>
+          />
         </div>
-					<div className="item-list">
+        <div className="item-list">
           {items.map((item, index) => (
             <div className="item-container">
               <div
@@ -208,10 +181,17 @@ const App = () => {
             </div>
           ))}
         </div>
-        </Card>
-      </Container>
+        <div className="totals">
+          <div className="total">Items: {totalItemCount}</div>
+          <div className="total">
+            Total $: <span className={priceColor}>{totalPriceCount}</span>
+          </div>
+          <div className="total">Budget: {inputBudgetValue}</div>
+        </div>
+      </div>
+      <h1 className="budget-message">{budgetMessage}</h1>
     </div>
   );
-};  
+};
 
 export default App;

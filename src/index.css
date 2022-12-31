@@ -1,5 +1,5 @@
 * {
-  font-size: 36px;
+  font-size: 20px;
 }
 
 body {
@@ -25,12 +25,15 @@ body {
 
 .main-container {
   background-color: #ec645b;
-  width: 50%;
+  width: 100%;
   height: min-content;
   border-radius: 5px;
   padding: 20px;
   box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
+  font-size: 20px;
+  margin-bottom: 1em;
 }
+
 
 .title {
   text-align: center;
@@ -42,9 +45,9 @@ body {
 }
 
 .budget-message {
-  margin-top: 2em;
-  font-size: 40px;
+  font-size: 20px;
   color: #000000;
+  margin-top: 1em;
 }
 
 .instructions {
@@ -53,8 +56,6 @@ body {
 }
 
 .add-budget-box {
-  margin-top: 1em;
-  margin-bottom: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,13 +65,7 @@ body {
 
 .add-budget-input {
   text-align: center;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 10px;
-  border-width: .1em;
-  background: white;
-  color: black;
-  width: 100%;
+  
 }
 
 .add-item-box {
@@ -83,6 +78,7 @@ body {
   border-radius: 10px;
   padding: 5px;
 }
+
 
 .add-item-box svg {
   margin: 5px;
@@ -130,6 +126,7 @@ input:focus {
 
 .item-name {
   cursor: pointer;
+  font-size: 20px;
 }
 
 .item-name svg {
@@ -151,28 +148,33 @@ input:focus {
 .total {
   float: right;
   padding: 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .over-budget {
-  font-size: 30px;
+  font-size: 20px;
   color: red;
 }
 
 .under-budget {
-  font-size: 30px;
+  font-size: 20px;
   color: green;
 }
 
 .regular-price {
-  font-size: 30px;
+  font-size: 20px;
 }
 
 .totals {
   margin: auto;
   display: flex;
-  justify-content: center;
+  margin-bottom: 1em;
+  border: solid;
+  border-left: none;
+  border-right: none;
+  margin-top: 1em;
 }
+
 
 .quantity {
   display: flex;
