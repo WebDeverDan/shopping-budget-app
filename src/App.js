@@ -143,7 +143,7 @@ const App = () => {
         <Card className="main-container">
           <Form className="add-item-form">
             <Form.Group className="mb-1" controlId="formEnterItem">
-              <Form.Label classname="form-text">Add an Item to Your List</Form.Label>
+              <Form.Label classname="text-dark">Add an Item to Your List</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Type Item"
@@ -153,7 +153,7 @@ const App = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formEnterCost">
-              <Form.Label classname="form-text">How Much Does it Cost?</Form.Label>
+              <Form.Label classname="text-dark">How Much Does it Cost?</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Cost"
@@ -168,11 +168,11 @@ const App = () => {
           >Add Item</Button>
           </Form>
 					<div className="totals">
-          <div className="total">Items: {totalItemCount}</div>
-          <div className="total">
+          <div className="total text-dark">Items: {totalItemCount}</div>
+          <div className="total text-dark">
             Total $: <span className={priceColor}>{totalPriceCount}</span>
           </div>
-          <div className="total">Budget: {inputBudgetValue}</div>
+          <div className="total text-dark">Budget: {inputBudgetValue}</div>
         </div>
 					<div className="item-list">
           {items.map((item, index) => (
