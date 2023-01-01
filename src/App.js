@@ -104,7 +104,7 @@ const App = () => {
     setPriceColorClass(priceColor);
     let budgetMessage;
     if (totalPriceCount > inputBudgetValue) {
-      budgetMessage = "OH GOSH! You're over budget!";
+      budgetMessage = "OVER BUDGET - ADJUST IT!";
     } else {
       budgetMessage = "Excellent job staying within your budget!";
     }
@@ -119,10 +119,10 @@ const App = () => {
   return (
     <div className="App">
       <Container fluid className="app-background">
-        <h1 className="app-title">Shopping Budgeting App</h1>
+        <h1 className="app-title">Your Shopping List</h1>
         <div className="add-budget-box">
           <h1 className="instructions">
-            Start by adding your budget for today
+            Start by Setting Your Budget
           </h1>
           <Form>
             <Form.Group
