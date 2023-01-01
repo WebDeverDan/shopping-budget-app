@@ -143,7 +143,7 @@ const App = () => {
         <Card className="main-container">
           <Form className="add-item-form">
             <Form.Group className="mb-1" controlId="formEnterItem">
-              <Form.Label>Add an Item to Your List</Form.Label>
+              <Form.Label classname="form-text">Add an Item to Your List</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Type Item"
@@ -153,7 +153,7 @@ const App = () => {
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formEnterCost">
-              <Form.Label>How Much Does it Cost?</Form.Label>
+              <Form.Label classname="form-text">How Much Does it Cost?</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Cost"

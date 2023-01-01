@@ -61,7 +61,6 @@ body {
   align-items: center;
   border-radius: 20px;
   padding: 5px;
-  
 }
 
 .add-budget-input {
@@ -84,6 +83,9 @@ body {
   margin-bottom: 1em;
 }
 
+.form-text {
+  font: #000000;
+}
 .add-price-input {
   box-sizing: border-box;
   border: none;
@@ -126,7 +128,6 @@ input:focus {
 }
 
 .item-action-buttons {
-  /* width: 30%; */
   display: flex;
   justify-content: space-between;
 }
@@ -149,18 +150,21 @@ input:focus {
 
 .under-budget {
   font-size: 20px;
-  color: green;
+  color: blue;
 }
 
 .regular-price {
   font-size: 20px;
+  color: #000000;
 }
 
 .totals {
   margin: auto;
   display: flex;
   margin-bottom: 1em;
+  font: #000000;
   border: solid;
+  border-color: #000000;
   border-left: none;
   border-right: none;
   margin-top: 1em;
