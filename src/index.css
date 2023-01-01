@@ -15,7 +15,7 @@ body {
 }
 
 .app-background {
-  background-color: #bee3ff;
+  background-color: #95eac4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +24,7 @@ body {
 }
 
 .main-container {
-  background-color: #ec645b;
+  background-color: #fbc1bb;
   width: 100%;
   height: min-content;
   border-radius: 5px;
@@ -61,10 +61,12 @@ body {
   align-items: center;
   border-radius: 20px;
   padding: 5px;
+  
 }
 
 .add-budget-input {
   text-align: center;
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.35);
   
 }
 
@@ -77,6 +79,7 @@ body {
   align-items: center;
   border-radius: 10px;
   padding: 5px;
+  
 }
 
 
@@ -91,6 +94,8 @@ body {
   color: black;
   width: 100%;
   height: 40px;
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
 }
 
 .add-price-input {
@@ -102,6 +107,7 @@ body {
   color: black;
   width: 100%;
   padding-left: .3em;
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.2);
 }
 
 input::placeholder {
@@ -121,7 +127,7 @@ input:focus {
   align-items: center;
   justify-content: space-between;
   padding: 20px 0 20px 0;
-  border-bottom: 1px #fbc1bb solid;
+  border-bottom: 1px #9c9a9a solid;
 }
 
 .item-name {
@@ -179,13 +185,17 @@ input:focus {
 .quantity {
   display: flex;
   align-items: center;
-  border: 1px solid #ec645b;
+  border: 1px solid #000000;
   background: white;
   border-radius: 50px;
   font-size: 12px;
   color: #ec645b;
   min-width: 70px;
   justify-content: space-between;
+}
+
+.quantity-integer{
+  color: #000000
 }
 
 button {
@@ -200,6 +210,10 @@ button:focus {
 
 button:hover {
   cursor: pointer;
+}
+
+.button-effects{
+  box-shadow: 10px 10px 26px 0px rgba(0, 0, 0, 0.3);
 }
 
 .completed {

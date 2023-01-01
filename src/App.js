@@ -6,7 +6,8 @@ import {
   faChevronLeft,
   faCircle,
   faCheckCircle,
-  faPlus,
+  // faPlus,
+  // faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import {Container , Card, Form, Button} from 'react-bootstrap'  
 
@@ -23,6 +24,7 @@ const App = () => {
   const [budgetMessage, setBudgetMessage] = useState(
     "preparing to keep you in budget..."
   );
+  
 
   // add new item
   const handleAddButtonClick = () => {
@@ -86,14 +88,11 @@ const App = () => {
   // this works don't mess with it
   const calculateTotalPrice = () => {
     const itemArr = items;
-
     let totalPriceCount = 0;
-
     itemArr.forEach((total) => {
       totalPriceCount += total.total_price;
     });
     setTotalPriceCount(totalPriceCount);
-
     let priceColor = {
       color: "green",
     };
@@ -109,9 +108,13 @@ const App = () => {
     } else {
       budgetMessage = "Excellent job staying within your budget!";
     }
-
     setBudgetMessage(budgetMessage);
-  };
+    };
+
+    const reloadWindow = () => {
+    window.location.reload();
+    };
+
 
   return (
     <div className="App">
@@ -140,25 +143,27 @@ const App = () => {
         <Card className="main-container">
           <Form className="add-item-form">
             <Form.Group className="mb-1" controlId="formEnterItem">
-              <Form.Label>New Item</Form.Label>
+              <Form.Label>Add an Item to Your List</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Type Item"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                className="add-item-input"
               />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formEnterCost">
-              <Form.Label>Item Cost</Form.Label>
+              <Form.Label>How Much Does it Cost?</Form.Label>
               <Form.Control
                 type="input"
                 placeholder="Cost"
                 value={priceInputValue}
                 onChange={(e) => setPriceInputValue(e.target.value)}
+                className="add-price-input"
               />
             </Form.Group>
             <Button
-            icon={faPlus}
+            className="button-effects"
             onClick={() => handleAddButtonClick()}
           >Add Item</Button>
           </Form>
@@ -197,7 +202,7 @@ const App = () => {
                     onClick={() => handleQuantityDecrease(index)}
                   />
                 </button>
-                <span> {item.quantity} </span>
+                <span className="quantity-integer"> {item.quantity} </span>
                 <button>
                   <FontAwesomeIcon
                     icon={faChevronRight}
@@ -205,10 +210,19 @@ const App = () => {
                   />
                 </button>
               </div>
+              {/* <button
+                icon={faMinus}
+                onClick={() => handleRemoveItemButtonClick()}>Remove
+              </button> */}
             </div>
           ))}
         </div>
         </Card>
+        <Button
+            className="button-effects"
+            onClick={() => reloadWindow()}
+          >Erase Your List
+      </Button>
       </Container>
     </div>
   );
