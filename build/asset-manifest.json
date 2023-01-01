@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/shopping-budget-app/static/css/main.c07faa73.chunk.css",
-    "main.js": "/shopping-budget-app/static/js/main.a91dc26d.chunk.js",
-    "main.js.map": "/shopping-budget-app/static/js/main.a91dc26d.chunk.js.map",
+    "main.js": "/shopping-budget-app/static/js/main.b1f9d08c.chunk.js",
+    "main.js.map": "/shopping-budget-app/static/js/main.b1f9d08c.chunk.js.map",
     "runtime-main.js": "/shopping-budget-app/static/js/runtime-main.4553f54d.js",
     "runtime-main.js.map": "/shopping-budget-app/static/js/runtime-main.4553f54d.js.map",
     "static/css/2.83e4c9b7.chunk.css": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css",
     "static/js/2.b48ae878.chunk.js": "/shopping-budget-app/static/js/2.b48ae878.chunk.js",
     "static/js/2.b48ae878.chunk.js.map": "/shopping-budget-app/static/js/2.b48ae878.chunk.js.map",
     "index.html": "/shopping-budget-app/index.html",
-    "precache-manifest.3eb6cb8e8efed8e5331afe50bee193b4.js": "/shopping-budget-app/precache-manifest.3eb6cb8e8efed8e5331afe50bee193b4.js",
+    "precache-manifest.69a34a341a59d8672f4fa11e6cd998d6.js": "/shopping-budget-app/precache-manifest.69a34a341a59d8672f4fa11e6cd998d6.js",
     "service-worker.js": "/shopping-budget-app/service-worker.js",
     "static/css/2.83e4c9b7.chunk.css.map": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css.map",
     "static/css/main.c07faa73.chunk.css.map": "/shopping-budget-app/static/css/main.c07faa73.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.83e4c9b7.chunk.css",
     "static/js/2.b48ae878.chunk.js",
     "static/css/main.c07faa73.chunk.css",
-    "static/js/main.a91dc26d.chunk.js"
+    "static/js/main.b1f9d08c.chunk.js"
   ]
 }

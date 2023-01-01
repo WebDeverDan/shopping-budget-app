@@ -174,7 +174,7 @@ const App = () => {
           </div>
           <div className="total text-dark">Budget: {inputBudgetValue}</div>
         </div>
-					<div className="item-list">
+					<div className="item-list text-dark">
           {items.map((item, index) => (
             <div className="item-container">
               <div

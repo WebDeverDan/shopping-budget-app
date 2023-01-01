@@ -107,6 +107,7 @@ input:focus {
 .item-list {
   display: flex;
   flex-direction: column;
+  
 }
 
 .item-container {
