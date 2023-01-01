@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/shopping-budget-app/static/css/main.63fa5418.chunk.css",
-    "main.js": "/shopping-budget-app/static/js/main.a054b6a2.chunk.js",
-    "main.js.map": "/shopping-budget-app/static/js/main.a054b6a2.chunk.js.map",
+    "main.css": "/shopping-budget-app/static/css/main.912cc870.chunk.css",
+    "main.js": "/shopping-budget-app/static/js/main.1adbf2d9.chunk.js",
+    "main.js.map": "/shopping-budget-app/static/js/main.1adbf2d9.chunk.js.map",
     "runtime-main.js": "/shopping-budget-app/static/js/runtime-main.4553f54d.js",
     "runtime-main.js.map": "/shopping-budget-app/static/js/runtime-main.4553f54d.js.map",
-    "static/js/2.6554e649.chunk.js": "/shopping-budget-app/static/js/2.6554e649.chunk.js",
-    "static/js/2.6554e649.chunk.js.map": "/shopping-budget-app/static/js/2.6554e649.chunk.js.map",
+    "static/css/2.83e4c9b7.chunk.css": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css",
+    "static/js/2.5d972221.chunk.js": "/shopping-budget-app/static/js/2.5d972221.chunk.js",
+    "static/js/2.5d972221.chunk.js.map": "/shopping-budget-app/static/js/2.5d972221.chunk.js.map",
     "index.html": "/shopping-budget-app/index.html",
-    "precache-manifest.d61e3b935e8e70496d513738a325cbc0.js": "/shopping-budget-app/precache-manifest.d61e3b935e8e70496d513738a325cbc0.js",
+    "precache-manifest.5b923a8658058761a1719267d473872f.js": "/shopping-budget-app/precache-manifest.5b923a8658058761a1719267d473872f.js",
     "service-worker.js": "/shopping-budget-app/service-worker.js",
-    "static/css/main.63fa5418.chunk.css.map": "/shopping-budget-app/static/css/main.63fa5418.chunk.css.map",
-    "static/js/2.6554e649.chunk.js.LICENSE.txt": "/shopping-budget-app/static/js/2.6554e649.chunk.js.LICENSE.txt"
+    "static/css/2.83e4c9b7.chunk.css.map": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css.map",
+    "static/css/main.912cc870.chunk.css.map": "/shopping-budget-app/static/css/main.912cc870.chunk.css.map",
+    "static/js/2.5d972221.chunk.js.LICENSE.txt": "/shopping-budget-app/static/js/2.5d972221.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.4553f54d.js",
-    "static/js/2.6554e649.chunk.js",
-    "static/css/main.63fa5418.chunk.css",
-    "static/js/main.a054b6a2.chunk.js"
+    "static/css/2.83e4c9b7.chunk.css",
+    "static/js/2.5d972221.chunk.js",
+    "static/css/main.912cc870.chunk.css",
+    "static/js/main.1adbf2d9.chunk.js"
   ]
 }
