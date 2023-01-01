@@ -219,7 +219,7 @@ const App = () => {
         </div>
         </Card>
         <Button
-            className="button-effects"
+            className="button-effects refresh-title"
             onClick={() => reloadWindow()}
           >Erase Your List
       </Button>
