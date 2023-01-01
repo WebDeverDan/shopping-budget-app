@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9702a7a70ee8f189ef5595e9c1e3fc9f",
+    "revision": "200b36aa743044babfc157c43acc9f8d",
     "url": "/shopping-budget-app/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css"
   },
   {
-    "revision": "878a607c5b20bc216669",
-    "url": "/shopping-budget-app/static/css/main.6b1c8749.chunk.css"
+    "revision": "24cccb511c86308cc5dd",
+    "url": "/shopping-budget-app/static/css/main.00345fdf.chunk.css"
   },
   {
     "revision": "d6b6c397fc2346157ce4",
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/shopping-budget-app/static/js/2.b48ae878.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "878a607c5b20bc216669",
+    "revision": "24cccb511c86308cc5dd",
     "url": "/shopping-budget-app/static/js/main.6daebe2b.chunk.js"
   },
   {
