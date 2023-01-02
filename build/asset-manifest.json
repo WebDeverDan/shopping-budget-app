@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/shopping-budget-app/static/css/main.6ba8e33e.chunk.css",
+    "main.js": "/shopping-budget-app/static/js/main.2419c995.chunk.js",
+    "main.js.map": "/shopping-budget-app/static/js/main.2419c995.chunk.js.map",
+    "runtime-main.js": "/shopping-budget-app/static/js/runtime-main.4553f54d.js",
+    "runtime-main.js.map": "/shopping-budget-app/static/js/runtime-main.4553f54d.js.map",
+    "static/css/2.83e4c9b7.chunk.css": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css",
+    "static/js/2.b48ae878.chunk.js": "/shopping-budget-app/static/js/2.b48ae878.chunk.js",
+    "static/js/2.b48ae878.chunk.js.map": "/shopping-budget-app/static/js/2.b48ae878.chunk.js.map",
+    "index.html": "/shopping-budget-app/index.html",
+    "precache-manifest.a89900bd77e2abaa39e220d137ba6c33.js": "/shopping-budget-app/precache-manifest.a89900bd77e2abaa39e220d137ba6c33.js",
+    "service-worker.js": "/shopping-budget-app/service-worker.js",
+    "static/css/2.83e4c9b7.chunk.css.map": "/shopping-budget-app/static/css/2.83e4c9b7.chunk.css.map",
+    "static/css/main.6ba8e33e.chunk.css.map": "/shopping-budget-app/static/css/main.6ba8e33e.chunk.css.map",
+    "static/js/2.b48ae878.chunk.js.LICENSE.txt": "/shopping-budget-app/static/js/2.b48ae878.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4553f54d.js",
+    "static/css/2.83e4c9b7.chunk.css",
+    "static/js/2.b48ae878.chunk.js",
+    "static/css/main.6ba8e33e.chunk.css",
+    "static/js/main.2419c995.chunk.js"
+  ]
+}

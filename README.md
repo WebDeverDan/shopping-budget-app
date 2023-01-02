@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  ![LicenseType](https://img.shields.io/badge/License%3A%20-MIT-green)
+  # Shopping & Budgeting App
+  
+  ## Description
+  
+  * A mobile-first mini-application to use while shopping and help keep the user on budget. The user will enter in their budget, add an item along with it's cost, and once it is added, will adjust the quantity. User can see the total amounts of their item(s), along with the total price. If the user is over budget, a message wil appear at the top of the page alerting them to check their items. The total price will also turn red in color if the total is higher than the budgeted amount. To reset the list, the "Erase Your List" button. 
+  
+  Currently, only support for whole numbers. Future development includes decimal support and a removal of items from the shopping list. 
+  
+  ## Table of Contents
+  
+  * [Usage](#Usage)
+  * [Contributing](#Contributing)
+  * [Tests](#Tests)
+  * [License](#License)
+  * [Acknowledgements](#Acknowledgements)
+  * [Questions](#Questions)
+  
+  
+  ## Usage
 
-## Available Scripts
+  * To view the source files, please refer to the Github repository for this application, also found below. 
 
-In the project directory, you can run:
+  * Github repository for source files: https://github.com/WebDeverDan/shopping-budget-app
+ 
+  * To start the app, download code, run npm install, npm start and let 'er rip!
 
-### `yarn start`
+  * To save on your phone, click the share button in the browser (iPhone) and click "Add to Home Screen"
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  ## Contributing
+  
+  * Anyone can contribute to this application and modify it in their own way. 
+  
+  ## Tests
+  
+  * This application has only been tested locally.
+  
+  ## License
+  
+  * This application is licensed under the MIT license type.
+  
+  ## Acknowledgments
+  
+  * This application uses React, JS, HTML.  
+  
+  ## Questions
+  * If you have any questions regarding the application, please reach out to **Daniel Bradley**, at their GitHub profile located here: **https://github.com/WebDeverDan**, or via email at **danielbvideo@gmail.com**.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ 
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

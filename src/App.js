@@ -6,7 +6,6 @@ import {
   faChevronLeft,
   faCircle,
   faCheckCircle,
-  // faPlus,
   // faMinus,
 } from "@fortawesome/free-solid-svg-icons";
 import {Container , Card, Form, Button} from 'react-bootstrap'  
@@ -25,7 +24,6 @@ const App = () => {
     "preparing to keep you in budget..."
   );
   
-
   // add new item
   const handleAddButtonClick = () => {
     const newPrice = parseInt(priceInputValue);
@@ -45,7 +43,7 @@ const App = () => {
     calculateTotalPrice();
   };
 
-  // increase quantity
+  // increase item quantity
   const handleQuantityIncrease = (index) => {
     const newItems = [...items];
     const indexItem = newItems[index];
@@ -57,7 +55,7 @@ const App = () => {
     calculateTotalPrice();
   };
 
-  // decreate quantity
+  // decrease item quantity
   const handleQuantityDecrease = (index) => {
     const newItems = [...items];
     const indexItem = newItems[index];
@@ -70,14 +68,14 @@ const App = () => {
 		console.log(newItems)
   };
 
-  // toggle complete feature
+  // toggle complete/strikethrough feature 
   const toggleComplete = (index) => {
     const newItems = [...items];
     newItems[index].isSelected = !newItems[index].isSelected;
     setItems(newItems);
   };
 
-  // this works don't mess with it
+  // calcluates total sum of items
   const calculateTotal = () => {
     const totalItemCount = items.reduce((total, item) => {
       return total + item.quantity;
@@ -85,7 +83,7 @@ const App = () => {
     setTotalItemCount(totalItemCount);
   };
 
-  // this works don't mess with it
+  // calculates total sum of prices
   const calculateTotalPrice = () => {
     const itemArr = items;
     let totalPriceCount = 0;
@@ -111,6 +109,7 @@ const App = () => {
     setBudgetMessage(budgetMessage);
     };
 
+    // reloads the page and clears it all
     const reloadWindow = () => {
     window.location.reload();
     };
