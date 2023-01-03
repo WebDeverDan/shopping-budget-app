@@ -5,7 +5,7 @@
   
   * A mobile-first mini-application to use while shopping and help keep the user on budget. The user will enter in their budget, add an item along with it's cost, and once it is added, will adjust the quantity. User can see the total amounts of their item(s), along with the total price. If the user is over budget, a message wil appear at the top of the page alerting them to check their items. The total price will also turn red in color if the total is higher than the budgeted amount. To reset the list, the "Erase Your List" button. 
   
-  Currently, only support for whole numbers. Future development includes decimal support and a removal of items from the shopping list. 
+  Currently, only support for whole numbers. Future development includes decimal support. 
   
   ## Table of Contents
   

@@ -6,7 +6,8 @@ import {
   faChevronLeft,
   faCircle,
   faCheckCircle,
-  // faMinus,
+  faMinus,
+  faTrash
 } from "@fortawesome/free-solid-svg-icons";
 import {Container , Card, Form, Button} from 'react-bootstrap'  
 
@@ -49,6 +50,7 @@ const App = () => {
     const indexItem = newItems[index];
     indexItem.quantity++;
     indexItem.total_price = indexItem.quantity * indexItem.price;
+    console.log(indexItem.total_price)
     setItems(newItems);
     setItemTotalPrice();
     calculateTotal();
@@ -67,6 +69,13 @@ const App = () => {
     calculateTotalPrice();
 		console.log(newItems)
   };
+
+  const handleRemoveItemButtonClick = (index) => {
+    items.splice(index, 1)
+    setItemTotalPrice();
+    calculateTotal();
+    calculateTotalPrice();
+  }
 
   // toggle complete/strikethrough feature 
   const toggleComplete = (index) => {
@@ -209,10 +218,12 @@ const App = () => {
                   />
                 </button>
               </div>
-              {/* <button
-                icon={faMinus}
-                onClick={() => handleRemoveItemButtonClick()}>Remove
-              </button> */}
+              <button>
+              <FontAwesomeIcon
+                icon={faTrash}
+                onClick={() => handleRemoveItemButtonClick(index)}
+                  />
+              </button>
             </div>
           ))}
         </div>
