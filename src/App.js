@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faChevronRight,
   faChevronLeft,
-  faCircle,
-  faCheckCircle,
+  faPlus,
   faMinus,
   faTrash
 } from "@fortawesome/free-solid-svg-icons";
@@ -185,35 +184,18 @@ const App = () => {
 					<div className="item-list text-dark">
           {items.map((item, index) => (
             <div className="item-container">
-              <div
-                div
-                className="item-name"
-                onClick={() => toggleComplete(index)}
-              >
-                {item.isSelected ? (
-                  <>
-                    <FontAwesomeIcon icon={faCheckCircle} />
-                    <span className="completed">{item.itemName}</span>
-                  </>
-                ) : (
-                  <>
-                    <FontAwesomeIcon icon={faCircle} />
-                    <span>{item.itemName}</span>
-                  </>
-                )}
-              </div>
               <div>$ {item.price * item.quantity}</div>
               <div className="quantity">
                 <button>
                   <FontAwesomeIcon
-                    icon={faChevronLeft}
+                    icon={faMinus}
                     onClick={() => handleQuantityDecrease(index)}
                   />
                 </button>
                 <span className="quantity-integer"> {item.quantity} </span>
                 <button>
                   <FontAwesomeIcon
-                    icon={faChevronRight}
+                    icon={faPlus}
                     onClick={() => handleQuantityIncrease(index)}
                   />
                 </button>

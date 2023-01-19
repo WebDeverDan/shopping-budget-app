@@ -176,10 +176,10 @@ input:focus {
 .quantity {
   display: flex;
   align-items: center;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
   background: white;
   border-radius: 50px;
-  font-size: 12px;
+  font-size: 15px;
   color: #ec645b;
   min-width: 70px;
   justify-content: space-between;
