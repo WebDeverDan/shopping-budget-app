@@ -177,8 +177,8 @@ input:focus {
   display: flex;
   align-items: center;
   /* border: 1px solid #000000; */
-  background: white;
-  border-radius: 50px;
+  /* background: white;
+  border-radius: 50px; */
   font-size: 15px;
   color: #ec645b;
   min-width: 70px;

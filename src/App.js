@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faChevronRight,
-  faChevronLeft,
   faPlus,
   faMinus,
   faTrash
@@ -184,6 +182,12 @@ const App = () => {
 					<div className="item-list text-dark">
           {items.map((item, index) => (
             <div className="item-container">
+              <div
+                div
+                className="item-name"
+              >
+                <span>{item.itemName}</span>
+              </div>
               <div>$ {item.price * item.quantity}</div>
               <div className="quantity">
                 <button>
