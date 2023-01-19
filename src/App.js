@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -75,11 +75,11 @@ const App = () => {
   }
 
   // toggle complete/strikethrough feature 
-  const toggleComplete = (index) => {
-    const newItems = [...items];
-    newItems[index].isSelected = !newItems[index].isSelected;
-    setItems(newItems);
-  };
+  // const toggleComplete = (index) => {
+  //   const newItems = [...items];
+  //   newItems[index].isSelected = !newItems[index].isSelected;
+  //   setItems(newItems);
+  // };
 
   // calcluates total sum of items
   const calculateTotal = () => {
